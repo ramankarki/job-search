@@ -12,7 +12,7 @@
 }
 
 .main-page-subHeading {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   color: #9da1b3;
 }
 
@@ -30,10 +30,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 992px) {
-    height: 200px;
-  }
 }
 
 .form {
@@ -43,10 +39,11 @@
   width: 90%;
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   @media (max-width: 991px) {
+    padding: 1.5rem 1.2rem;
     flex-direction: column;
   }
 }
@@ -80,7 +77,11 @@
 .far,
 .fas {
   color: #b9bdcf;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+
+  @media (min-width: 400px) {
+    margin-right: 1rem;
+  }
 }
 
 .search {
@@ -101,4 +102,45 @@
   &:hover {
     background-color: #0169e0;
   }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.filters {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  @media (min-width: 576px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.results-num {
+  font-size: 1.2rem;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 575px) {
+    margin-top: 1.5rem;
+  }
+}
+
+.filter-tools {
+  margin-top: 1rem;
+}
+
+.filter-checkbox {
+  font-size: 0.9rem;
+}
+
+.filter-checkbox:last-child {
+  margin-left: 1.5rem;
 }
