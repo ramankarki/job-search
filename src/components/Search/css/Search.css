@@ -1,0 +1,133 @@
+.header {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-page-heading {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.main-page-subHeading {
+  margin-top: 0.5rem;
+  color: #9da1b3;
+}
+
+.form-background {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  height: 300px;
+  background-image: url("../backgroundImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 992px) {
+  .form-background {
+    height: 200px;
+  }
+}
+
+.form {
+  background-color: white;
+  border-radius: 0.5rem;
+  max-width: 800px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.input-field {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .input-field {
+    margin-right: 1rem;
+  }
+  .input-field:first-child {
+    border-right: 1px solid #d6d9db;
+  }
+}
+
+.input-field input {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #666666;
+  border: none;
+}
+
+.input-field input::-webkit-input-placeholder {
+  color: #b9bdcf;
+}
+
+.input-field input:-ms-input-placeholder {
+  color: #b9bdcf;
+}
+
+.input-field input::-ms-input-placeholder {
+  color: #b9bdcf;
+}
+
+.input-field input::placeholder {
+  color: #b9bdcf;
+}
+
+.far,
+.fas {
+  color: #b9bdcf;
+  margin-right: 1rem;
+}
+
+.search {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #1e86ff;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .search {
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=Search.css.map */
