@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Spinner.css";
 import "./css/Search.css";
 
 export default function Search(props) {
@@ -6,7 +7,10 @@ export default function Search(props) {
     if (props.loading === null) {
       return "";
     } else if (props.loading === true) {
-      return [<i key="gfrtyt" className="fas fa-briefcase"></i>, "Loading..."];
+      return [
+        <i key="gfrtyt" className="fas fa-briefcase"></i>,
+        <div class="loader ease-out-linear rounded-full border-3 border-t-2 border-gray-200 h-7 w-7"></div>,
+      ];
     } else if (props.loading === false) {
       return [
         <i key="gfvff" className="fas fa-briefcase"></i>,
@@ -61,7 +65,7 @@ export default function Search(props) {
           <div className="filter">
             <div className="filter-heading">
               <i className="fas fa-sliders-h"></i>
-              <p>Filter</p>
+              <p className="filter-text">Filter</p>
             </div>
             <div className="filter-tools">
               <label className="filter-checkbox">
