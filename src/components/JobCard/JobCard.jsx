@@ -28,7 +28,7 @@ export default function JobCard(props) {
         </p>
         <p className="time">
           <i className="far fa-clock"></i>
-          {props.created_at} days ago
+          {props.created_at}
         </p>
       </div>
     </section>
