@@ -81,7 +81,7 @@ export default function Search(props) {
         <section className="filters">
           <p className="results-num">{results()}</p>
           <div className="filter">
-            {props.loading === null ? (
+            {props.loading === null || props.jobs.length === 0 ? (
               ""
             ) : (
               <React.Fragment key="htgrfb">
