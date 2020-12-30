@@ -1,3 +1,8 @@
+$grey-medium: #9da1b3;
+$blue-dark: #32353d;
+$blue-bright: #1e86ff;
+$blue-bright-darker: #0169e0;
+
 .header {
   max-width: 1200px;
   width: 90%;
@@ -13,7 +18,7 @@
 
 .main-page-subHeading {
   margin-top: 1rem;
-  color: #9da1b3;
+  color: $grey-medium;
 }
 
 .form-background {
@@ -30,6 +35,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 992px) {
+    height: 250px;
+  }
 }
 
 .form {
@@ -64,19 +73,19 @@
 
   input {
     width: 100%;
-    font-size: 0.9rem;
-    color: rgb(102, 102, 102);
+    font-size: 1rem;
     border: none;
+    color: rgb(50, 53, 61);
 
     &::placeholder {
-      color: #b9bdcf;
+      color: $grey-medium;
     }
   }
 }
 
 .far,
 .fas {
-  color: #b9bdcf;
+  color: $grey-medium;
   margin-right: 0.5rem;
 
   @media (min-width: 400px) {
@@ -89,7 +98,7 @@
   border: none;
   font-size: 1rem;
   border-radius: 0.5rem;
-  background-color: #1e86ff;
+  background-color: $blue-bright;
   color: white;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -100,7 +109,7 @@
   }
 
   &:hover {
-    background-color: #0169e0;
+    background-color: $blue-bright-darker;
   }
 
   &:active {
@@ -122,6 +131,8 @@
 
 .results-num {
   font-size: 1.2rem;
+  color: $blue-dark;
+  font-weight: 500;
 }
 
 .filter-heading {
@@ -139,7 +150,7 @@
 
 .filter-checkbox {
   font-size: 0.9rem;
-  color: #9da1b3;
+  color: $grey-medium;
 }
 
 .filter-checkbox:last-child {

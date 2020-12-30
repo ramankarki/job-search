@@ -38,6 +38,12 @@
           align-items: center;
 }
 
+@media (min-width: 992px) {
+  .form-background {
+    height: 250px;
+  }
+}
+
 .form {
   background-color: white;
   border-radius: 0.5rem;
@@ -86,30 +92,30 @@
 
 .input-field input {
   width: 100%;
-  font-size: 0.9rem;
-  color: #666666;
+  font-size: 1rem;
   border: none;
+  color: #32353d;
 }
 
 .input-field input::-webkit-input-placeholder {
-  color: #b9bdcf;
+  color: #9da1b3;
 }
 
 .input-field input:-ms-input-placeholder {
-  color: #b9bdcf;
+  color: #9da1b3;
 }
 
 .input-field input::-ms-input-placeholder {
-  color: #b9bdcf;
+  color: #9da1b3;
 }
 
 .input-field input::placeholder {
-  color: #b9bdcf;
+  color: #9da1b3;
 }
 
 .far,
 .fas {
-  color: #b9bdcf;
+  color: #9da1b3;
   margin-right: 0.5rem;
 }
 
@@ -169,6 +175,8 @@
 
 .results-num {
   font-size: 1.2rem;
+  color: #32353d;
+  font-weight: 500;
 }
 
 .filter-heading {
