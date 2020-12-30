@@ -9,7 +9,10 @@ export default function Search(props) {
     } else if (props.loading === true) {
       return [
         <i key="gfrtyt" className="fas fa-briefcase"></i>,
-        <div class="loader ease-out-linear rounded-full border-3 border-t-2 border-gray-200 h-7 w-7"></div>,
+        <span
+          key="jyhbfghgfg"
+          className="loader ease-out-linear rounded-full border-3 border-t-2 border-gray-200 h-7 w-7"
+        ></span>,
       ];
     } else if (props.loading === false) {
       return [
@@ -20,7 +23,7 @@ export default function Search(props) {
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment key="hftrhgfg5">
       <header className="header">
         <h1 className="main-page-heading">
           <strong>Github</strong> Jobs
@@ -63,18 +66,24 @@ export default function Search(props) {
         <div className="filters">
           <p className="results-num">{results()}</p>
           <div className="filter">
-            <div className="filter-heading">
-              <i className="fas fa-sliders-h"></i>
-              <p className="filter-text">Filter</p>
-            </div>
-            <div className="filter-tools">
-              <label className="filter-checkbox">
-                <input type="checkbox" /> Full Time
-              </label>
-              <label className="filter-checkbox">
-                <input type="checkbox" /> Latest
-              </label>
-            </div>
+            {props.loading === null ? (
+              ""
+            ) : (
+              <React.Fragment key="htgrfb">
+                <div className="filter-heading">
+                  <i className="fas fa-sliders-h"></i>
+                  <p className="filter-text">Filter</p>
+                </div>
+                <div className="filter-tools">
+                  <label className="filter-checkbox">
+                    <input type="checkbox" /> Full Time
+                  </label>
+                  <label className="filter-checkbox">
+                    <input type="checkbox" /> Latest
+                  </label>
+                </div>
+              </React.Fragment>
+            )}
           </div>
         </div>
       </main>
