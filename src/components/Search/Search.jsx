@@ -1,8 +1,23 @@
 import React from "react";
 import "./css/Spinner.css";
 import "./css/Search.css";
+import JobCard from "../JobCard/JobCard";
 
 export default function Search(props) {
+  const createJobCard = props.jobs.map((job) => {
+    return (
+      <JobCard
+        key={job.id}
+        logoURL={job.company_logo}
+        companyName={job.company}
+        jobTitle={job.title}
+        jobType={job.type}
+        location={job.location}
+        created_at={job.created_at}
+      />
+    );
+  });
+
   const results = () => {
     if (props.loading === null) {
       return "";
@@ -34,7 +49,7 @@ export default function Search(props) {
       </header>
 
       <main>
-        <div className="form-background">
+        <section className="form-background">
           <form className="form" onSubmit={props.onSearchSubmit}>
             <label className="input-field">
               <i className="far fa-building"></i>
@@ -61,9 +76,9 @@ export default function Search(props) {
               Search
             </button>
           </form>
-        </div>
+        </section>
 
-        <div className="filters">
+        <section className="filters">
           <p className="results-num">{results()}</p>
           <div className="filter">
             {props.loading === null ? (
@@ -76,7 +91,10 @@ export default function Search(props) {
                 </div>
                 <div className="filter-tools">
                   <label className="filter-checkbox">
-                    <input type="checkbox" /> Full Time
+                    <input type="radio" name="jobType" /> Full Time
+                  </label>
+                  <label className="filter-checkbox">
+                    <input type="radio" name="jobType" /> Part Time
                   </label>
                   <label className="filter-checkbox">
                     <input type="checkbox" /> Latest
@@ -85,7 +103,9 @@ export default function Search(props) {
               </React.Fragment>
             )}
           </div>
-        </div>
+        </section>
+
+        <section className="job-cards">{createJobCard}</section>
       </main>
     </React.Fragment>
   );
