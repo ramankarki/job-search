@@ -58,7 +58,8 @@ export default class App extends React.Component {
     let newJobs = this.state.jobs;
 
     newJobs = newJobs.map((job) => {
-      job.created_at = this.jobCreatedDate(job.created_at);
+      let days = this.jobCreatedDate(job.created_at);
+      job.created_at = days === 0 ? "Today" : `${days} days ago`;
       return job;
     });
 
