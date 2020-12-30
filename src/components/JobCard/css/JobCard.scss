@@ -1,0 +1,97 @@
+$grey-medium: #9da1b3;
+
+.job-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.job-desc {
+  @media (min-width: 576px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.company-logo {
+  display: block;
+  width: 100px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 575px) {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.job-title {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+.company-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.full-time {
+  border: 1px solid #334680;
+  max-width: max-content;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+}
+
+.job-time-location {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: $grey-medium;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 300px;
+  }
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.time {
+  margin-left: 1rem;
+}

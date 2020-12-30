@@ -1,0 +1,136 @@
+.job-card {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .job-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 576px) {
+  .job-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
+.company-logo {
+  display: block;
+  width: 100px;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 575px) {
+  .company-logo {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.company-logo img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.job-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .job-title {
+    width: 70%;
+  }
+}
+
+.company-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.full-time {
+  border: 1px solid #334680;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+}
+
+.job-time-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #9da1b3;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .job-time-location {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .job-time-location {
+    max-width: 300px;
+  }
+}
+
+.job-time-location > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.time {
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=JobCard.css.map */
