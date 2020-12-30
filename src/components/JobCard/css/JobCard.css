@@ -38,6 +38,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 575px) {
@@ -48,7 +50,6 @@
 }
 
 .company-logo img {
-  border-radius: 0.5rem;
   width: 100%;
   height: auto;
 }

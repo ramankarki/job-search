@@ -9,7 +9,7 @@ export default function JobCard(props) {
           <img
             src={
               props.logoURL ||
-              "https://via.placeholder.com/100x100.png?text=logo+not+found"
+              "https://placeholder.pics/svg/200/090789/FFFFFF/logo%20not%20found"
             }
             alt={props.companyName}
           />
