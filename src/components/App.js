@@ -17,7 +17,7 @@ export default class App extends React.Component {
   };
 
   setSearchInput = (searchInput) => {
-    this.setState({ searchInput: searchInput });
+    this.setState({ searchInput });
   };
 
   onSearchSubmit = (event) => {
@@ -28,13 +28,13 @@ export default class App extends React.Component {
     }
 
     this.setState({ loading: true });
-    this.setState({ lastSearchInput: this.state.searchInput.slice() });
+    this.setState({ lastSearchInput: this.state.searchInput.trim().slice() });
     this.setLocationInput("");
     this.setSearchInput("");
 
     const getJobs = async () => {
       const data = await fetch(
-        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${this.state.searchInput}&location=${this.state.locationInput}`
+        `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${this.state.lastSearchInput}&location=${this.state.locationInput}`
       );
 
       const jsonData = await data.json();
@@ -59,7 +59,12 @@ export default class App extends React.Component {
 
     newJobs = newJobs.map((job) => {
       let days = this.jobCreatedDate(job.created_at);
-      job.created_at = days === 0 ? "Today" : `${days} days ago`;
+      job.created_at =
+        days === 0
+          ? "Today"
+          : days === 1
+          ? `${days} day ago`
+          : `${days} days ago`;
       return job;
     });
 
