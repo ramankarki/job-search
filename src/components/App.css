@@ -19,3 +19,7 @@ body {
 input {
   font-family: "Inter", sans-serif;
 }
+
+section {
+  display: block;
+}

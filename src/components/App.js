@@ -39,11 +39,30 @@ export default class App extends React.Component {
 
       const jsonData = await data.json();
       this.setState({ jobs: jsonData });
+      this.setJobCreatedTime();
       this.setState({ loading: false });
-      console.log(this.state);
     };
 
     getJobs();
+  };
+
+  jobCreatedDate = (UTCDate) => {
+    const date1 = new Date(UTCDate);
+    const date2 = new Date();
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+  };
+
+  setJobCreatedTime = () => {
+    let newJobs = this.state.jobs;
+
+    newJobs = newJobs.map((job) => {
+      job.created_at = this.jobCreatedDate(job.created_at);
+      return job;
+    });
+
+    this.setState({ jobs: newJobs });
   };
 
   render() {
