@@ -100,7 +100,7 @@ export default function Search(props) {
                       type="radio"
                       name="jobType"
                       value="Full Time"
-                      onClick={props.setJobTypeFilter}
+                      onChange={props.setJobTypeFilter}
                       checked={
                         props.jobTypeFilter === "Full Time" ? true : false
                       }
@@ -112,7 +112,7 @@ export default function Search(props) {
                       type="radio"
                       name="jobType"
                       value="Part Time"
-                      onClick={props.setJobTypeFilter}
+                      onChange={props.setJobTypeFilter}
                       checked={
                         props.jobTypeFilter === "Part Time" ? true : false
                       }
