@@ -20,6 +20,7 @@ input {
   font-family: "Inter", sans-serif;
 }
 
-section {
+section,
+article {
   display: block;
 }
