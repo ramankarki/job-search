@@ -116,6 +116,7 @@ export default class App extends React.Component {
             onSearchSubmit={this.onSearchSubmit}
             jobs={this.filteredJobWithState()}
             loading={this.state.loading}
+            jobTypeFilter={this.state.jobTypeFilter}
             setJobTypeFilter={this.setJobTypeFilter}
             onJobClick={this.onJobClick}
           />

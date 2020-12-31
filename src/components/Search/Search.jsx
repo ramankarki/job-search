@@ -100,6 +100,9 @@ export default function Search(props) {
                       name="jobType"
                       value="Full Time"
                       onClick={props.setJobTypeFilter}
+                      checked={
+                        props.jobTypeFilter === "Full Time" ? true : false
+                      }
                     />{" "}
                     Full Time
                   </label>
@@ -109,6 +112,9 @@ export default function Search(props) {
                       name="jobType"
                       value="Part Time"
                       onClick={props.setJobTypeFilter}
+                      checked={
+                        props.jobTypeFilter === "Part Time" ? true : false
+                      }
                     />{" "}
                     Part Time
                   </label>
