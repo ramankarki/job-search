@@ -1,1 +1,173 @@
-/* No CSS *//*# sourceMappingURL=Details.css.map */
+.details {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .details {
+    max-width: 1200px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
+    grid-column-gap: 5rem;
+  }
+}
+
+.back-to-search {
+  color: #1e86ff;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.back-to-search .fas {
+  color: #1e86ff;
+}
+
+.website-title {
+  margin-top: 1.5rem;
+}
+
+.how-to-apply {
+  margin-top: 2.5rem;
+}
+
+.how-to-apply .heading {
+  font-size: 0.9rem;
+  color: #c1c4d1;
+  font-weight: 700;
+}
+
+.how-to-apply .content {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.how-to-apply .content a {
+  color: #1e86ff;
+}
+
+.details-content {
+  max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .details-content {
+    width: 80%;
+  }
+}
+
+.details-jobTitle {
+  margin-top: 3.5rem;
+}
+
+.jobTitle-time h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .jobTitle-time h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.jobTitle-time h1 .job-title-only {
+  max-width: 70%;
+  font-weight: 700;
+}
+
+.job-created-time {
+  font-size: 0.9rem;
+  color: #9da1b3;
+}
+
+.company-logo-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 2.5rem;
+}
+
+.company-logo-location picture {
+  display: block;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+
+.company-logo-location picture img {
+  width: 100%;
+  height: auto;
+}
+
+.company-name-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 0.8rem;
+}
+
+.company-name {
+  font-size: 0.8rem;
+}
+
+.company-location {
+  font-size: 0.8rem;
+  color: #9da1b3;
+}
+
+.company-location .fas {
+  margin-right: 0.5rem;
+}
+
+.details-description {
+  margin-top: 2rem;
+  line-height: 1.8rem;
+}
+
+.details-description p {
+  margin: 1.5rem 0;
+}
+
+.details-description h2 {
+  margin: 1.5rem 0;
+  font-weight: 700;
+}
+
+.details-description a {
+  color: #1e86ff;
+}
+
+.details-description ul li,
+.details-description ol li {
+  list-style: disc;
+  margin: 0.7rem 0;
+  margin-left: 2rem;
+}
+
+.details-description ol li {
+  list-style: decimal;
+}
+
+.details-description strong {
+  font-weight: 400;
+}
+/*# sourceMappingURL=Details.css.map */
