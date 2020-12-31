@@ -2,19 +2,23 @@ import React from "react";
 import "./css/Spinner.css";
 import "./css/Search.css";
 import JobCard from "../JobCard/JobCard";
+import Link from "../Link";
 
 export default function Search(props) {
   const createJobCard = props.jobs.map((job) => {
     return (
-      <JobCard
-        key={job.id}
-        logoURL={job.company_logo}
-        companyName={job.company}
-        jobTitle={job.title}
-        jobType={job.type}
-        location={job.location}
-        created_at={job.created_at}
-      />
+      <Link key={job.id} href="/details" className="route-link">
+        <JobCard
+          logoURL={job.company_logo}
+          companyName={job.company}
+          jobTitle={job.title}
+          jobType={job.type}
+          location={job.location}
+          created_at={job.created_at}
+          job={job}
+          onJobClick={props.onJobClick}
+        />
+      </Link>
     );
   });
 
