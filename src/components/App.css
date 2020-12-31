@@ -24,3 +24,12 @@ section,
 article {
   display: block;
 }
+
+.acknowledgement {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.acknowledgement > a {
+  color: #1e86ff;
+}

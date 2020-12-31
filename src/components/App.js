@@ -142,6 +142,19 @@ export default class App extends React.Component {
         >
           <Details selectedJob={this.state.selectedJob} />
         </Route>
+        <p className="acknowledgement">
+          <a
+            href="https://github.com/ramankarki"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Raman Karki
+          </a>{" "}
+          @{" "}
+          <a href="https://devchallenges.io/" target="_blank" rel="noreferrer">
+            DevChallenges.io
+          </a>
+        </p>
       </React.Fragment>
     );
   }
