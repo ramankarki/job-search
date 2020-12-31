@@ -6,7 +6,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-column-gap: 5rem;
+    grid-column-gap: 7rem;
   }
 }
 
@@ -79,7 +79,7 @@
 
 .company-logo-location {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   margin-top: 2.5rem;
 
   picture {
@@ -103,11 +103,11 @@
 }
 
 .company-name {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .company-location {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #9da1b3;
 
   .fas {
