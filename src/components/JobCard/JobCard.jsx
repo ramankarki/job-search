@@ -3,7 +3,13 @@ import "./css/JobCard.css";
 
 export default function JobCard(props) {
   return (
-    <section className="job-card" onClick={() => props.onJobClick(props.job)}>
+    <section
+      className="job-card"
+      onClick={(event) => {
+        props.onJobClick(props.job);
+        document.documentElement.scrollTop = 0;
+      }}
+    >
       <div className="job-desc">
         <picture className="company-logo">
           <img
