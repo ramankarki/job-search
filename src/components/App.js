@@ -1,6 +1,8 @@
 import React from "react";
 import Search from "./Search/Search";
+import Details from "./Details/Details";
 import "./App.css";
+import Route from "./Route";
 
 export default class App extends React.Component {
   state = {
@@ -11,6 +13,7 @@ export default class App extends React.Component {
     jobTypeFilter: null,
     lastSearchInput: "",
     loading: null,
+    selectedJob: null,
   };
 
   setLocationInput = (locationInput) => {
@@ -92,6 +95,10 @@ export default class App extends React.Component {
     return this.state.jobs;
   };
 
+  onJobClick = (job) => {
+    this.setState({ selectedJob: job });
+  };
+
   componentDidUpdate() {
     console.log(this.state);
   }
@@ -99,17 +106,23 @@ export default class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Search
-          locationInput={this.state.locationInput}
-          setLocationInput={this.setLocationInput}
-          searchInput={this.state.searchInput}
-          setSearchInput={this.setSearchInput}
-          lastSearchInput={this.state.lastSearchInput}
-          onSearchSubmit={this.onSearchSubmit}
-          jobs={this.filteredJobWithState()}
-          loading={this.state.loading}
-          setJobTypeFilter={this.setJobTypeFilter}
-        />
+        <Route path="/">
+          <Search
+            locationInput={this.state.locationInput}
+            setLocationInput={this.setLocationInput}
+            searchInput={this.state.searchInput}
+            setSearchInput={this.setSearchInput}
+            lastSearchInput={this.state.lastSearchInput}
+            onSearchSubmit={this.onSearchSubmit}
+            jobs={this.filteredJobWithState()}
+            loading={this.state.loading}
+            setJobTypeFilter={this.setJobTypeFilter}
+            onJobClick={this.onJobClick}
+          />
+        </Route>
+        <Route path="/details">
+          <Details selectedJob={this.state.selectedJob} />
+        </Route>
       </React.Fragment>
     );
   }
