@@ -68,6 +68,13 @@ export default class App extends React.Component {
       return job;
     });
 
+    // sorting jobs by time
+    newJobs = newJobs.sort((date1, date2) => {
+      date1 = +date1.created_at.split(" ")[0];
+      date2 = +date2.created_at.split(" ")[0];
+      return date1 - date2;
+    });
+
     this.setState({ jobs: newJobs });
   };
 

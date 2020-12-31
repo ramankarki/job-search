@@ -96,9 +96,6 @@ export default function Search(props) {
                   <label className="filter-checkbox">
                     <input type="radio" name="jobType" /> Part Time
                   </label>
-                  <label className="filter-checkbox">
-                    <input type="checkbox" /> Latest
-                  </label>
                 </div>
               </React.Fragment>
             )}
