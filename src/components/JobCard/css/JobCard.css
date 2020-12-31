@@ -85,6 +85,12 @@
   margin: 1rem 0;
 }
 
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
 .full-time {
   border: 1px solid #334680;
   max-width: -webkit-max-content;

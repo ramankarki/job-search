@@ -59,6 +59,10 @@ $grey-medium: #9da1b3;
   font-size: 1.4rem;
   font-weight: 500;
   margin: 1rem 0;
+
+  @media (max-width: 576px) {
+    font-size: 1.2rem;
+  }
 }
 
 .full-time {
