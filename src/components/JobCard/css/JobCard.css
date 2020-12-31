@@ -3,6 +3,8 @@
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
 
 @media (min-width: 768px) {
@@ -13,6 +15,10 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .job-card:hover {
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 }
 
