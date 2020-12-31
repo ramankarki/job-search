@@ -163,10 +163,8 @@ $blue-bright-darker: #0169e0;
 .filter-checkbox {
   font-size: 0.9rem;
   color: $grey-medium;
-}
-
-.filter-checkbox {
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 
 .filter-checkbox:last-child {
