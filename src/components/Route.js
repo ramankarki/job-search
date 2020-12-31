@@ -14,7 +14,5 @@ export default function Route(props) {
     };
   }, []);
 
-  console.log(currentPath);
-
   return currentPath === props.path ? props.children : null;
 }
