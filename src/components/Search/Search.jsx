@@ -45,7 +45,7 @@ export default function Search(props) {
     <React.Fragment key="hftrhgfg5">
       <header className="header">
         <h1 className="main-page-heading">
-          <strong>Github</strong> Jobs
+          <strong>Search</strong> Jobs
         </h1>
         <p className="main-page-subHeading">
           Get the most available jobs for your location
@@ -64,6 +64,7 @@ export default function Search(props) {
                 value={props.searchInput}
                 onChange={(event) => props.setSearchInput(event.target.value)}
                 required
+                autoFocus
               />
             </label>
             <label className="input-field">
