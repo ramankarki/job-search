@@ -8,6 +8,7 @@ export default class App extends React.Component {
     locationInput: "",
     fullTime: false,
     jobs: [],
+    jobTypeFilter: null,
     lastSearchInput: "",
     loading: null,
   };
@@ -78,6 +79,23 @@ export default class App extends React.Component {
     this.setState({ jobs: newJobs });
   };
 
+  setJobTypeFilter = (event) => {
+    this.setState({ jobTypeFilter: event.target.value });
+  };
+
+  filteredJobWithState = () => {
+    if (this.state.jobTypeFilter === "Full Time") {
+      return this.state.jobs.filter((job) => job.type === "Full Time");
+    } else if (this.state.jobTypeFilter === "Part Time") {
+      return this.state.jobs.filter((job) => job.type === "Part Time");
+    }
+    return this.state.jobs;
+  };
+
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -88,8 +106,9 @@ export default class App extends React.Component {
           setSearchInput={this.setSearchInput}
           lastSearchInput={this.state.lastSearchInput}
           onSearchSubmit={this.onSearchSubmit}
-          jobs={this.state.jobs}
+          jobs={this.filteredJobWithState()}
           loading={this.state.loading}
+          setJobTypeFilter={this.setJobTypeFilter}
         />
       </React.Fragment>
     );

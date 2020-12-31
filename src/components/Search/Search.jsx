@@ -91,10 +91,22 @@ export default function Search(props) {
                 </div>
                 <div className="filter-tools">
                   <label className="filter-checkbox">
-                    <input type="radio" name="jobType" /> Full Time
+                    <input
+                      type="radio"
+                      name="jobType"
+                      value="Full Time"
+                      onClick={props.setJobTypeFilter}
+                    />{" "}
+                    Full Time
                   </label>
                   <label className="filter-checkbox">
-                    <input type="radio" name="jobType" /> Part Time
+                    <input
+                      type="radio"
+                      name="jobType"
+                      value="Part Time"
+                      onClick={props.setJobTypeFilter}
+                    />{" "}
+                    Part Time
                   </label>
                 </div>
               </React.Fragment>
