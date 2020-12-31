@@ -3,7 +3,7 @@ import "./css/JobCard.css";
 
 export default function JobCard(props) {
   return (
-    <section className="job-card">
+    <section className="job-card" onClick={() => props.onJobClick(props.job)}>
       <div className="job-desc">
         <picture className="company-logo">
           <img
