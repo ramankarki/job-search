@@ -14,6 +14,11 @@ export default class App extends React.Component {
     lastSearchInput: "",
     loading: null,
     selectedJob: null,
+    currentPath: "/",
+  };
+
+  setCurrentPath = () => {
+    this.setState({ currentPath: window.location.pathname });
   };
 
   setLocationInput = (locationInput) => {
@@ -99,14 +104,23 @@ export default class App extends React.Component {
     this.setState({ selectedJob: job });
   };
 
-  componentDidUpdate() {
-    console.log(this.state);
+  componentDidMount() {
+    if (this.state.selectedJob === null) {
+      window.history.pushState({}, "", "/");
+
+      const navEvent = new PopStateEvent("popstate");
+      window.dispatchEvent(navEvent);
+    }
   }
 
   render() {
     return (
       <React.Fragment>
-        <Route path="/">
+        <Route
+          path="/"
+          currentPath={this.state.currentPath}
+          setCurrentPath={this.setCurrentPath}
+        >
           <Search
             locationInput={this.state.locationInput}
             setLocationInput={this.setLocationInput}
@@ -121,7 +135,11 @@ export default class App extends React.Component {
             onJobClick={this.onJobClick}
           />
         </Route>
-        <Route path="/details">
+        <Route
+          path="/details"
+          currentPath={this.state.currentPath}
+          setCurrentPath={this.setCurrentPath}
+        >
           <Details selectedJob={this.state.selectedJob} />
         </Route>
       </React.Fragment>
