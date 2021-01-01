@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/Details.css";
 import Link from "../Link";
 
 export default function Details(props) {
+  useEffect(() => {
+    return () => {
+      document
+        .getElementById(props.selectedJob.id)
+        .scrollIntoView({ block: "center", behavior: "smooth" });
+    };
+  });
+
   return (
     <div className="details">
       <aside className="details-links">
