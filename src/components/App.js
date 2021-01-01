@@ -42,6 +42,9 @@ export default class App extends React.Component {
     this.setSearchInput("");
 
     const getJobs = async () => {
+      document
+        .querySelector(".filters")
+        .scrollIntoView({ block: "center", behavior: "smooth" });
       const data = await fetch(
         `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${this.state.lastSearchInput}&location=${this.state.locationInput}`
       );
@@ -50,9 +53,6 @@ export default class App extends React.Component {
       this.setState({ jobs: jsonData });
       this.setJobCreatedTime();
       this.setState({ loading: false });
-      document
-        .querySelector(".filters")
-        .scrollIntoView({ block: "center", behavior: "smooth" });
     };
 
     getJobs();
