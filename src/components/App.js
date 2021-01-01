@@ -50,6 +50,9 @@ export default class App extends React.Component {
       this.setState({ jobs: jsonData });
       this.setJobCreatedTime();
       this.setState({ loading: false });
+      document
+        .querySelector(".filters")
+        .scrollIntoView({ block: "center", behavior: "smooth" });
     };
 
     getJobs();
