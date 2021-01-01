@@ -5,6 +5,7 @@ export default function JobCard(props) {
   return (
     <section
       className="job-card"
+      id={props.job.id}
       onClick={(event) => {
         props.onJobClick(props.job);
         document.documentElement.scrollTop = 0;
