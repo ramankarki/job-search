@@ -10,7 +10,7 @@ export default function Route(props) {
     return () => {
       window.removeEventListener("popstate", onLocationChange);
     };
-  }, [props.currentPath]);
+  }, [props]);
 
   return props.currentPath === props.path ? props.children : null;
 }
