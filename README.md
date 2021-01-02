@@ -10,12 +10,12 @@
 <!-- badges -->
 <div align="center">
   <img src="https://api.netlify.com/api/v1/badges/89050cf2-a063-4286-be00-a09e9d1db20c/deploy-status" alt="netlify deploy status">
-  <img style="margin-left: 2rem;" src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="mit license badge">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="mit license badge">
 </div>
 
 <!-- screen shot -->
-<div style="margin: 2rem 0">
-  <img width="100%" src="website.gif" alt="screen shot of website">
+<div>
+  <img width="100%" src="how-to-use.gif" alt="screen shot of website">
 </div>
 
 ## Getting Started
